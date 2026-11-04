@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Копируем package-файлы и устанавливаем зависимости
 COPY package*.json ./
-RUN npm ci
+RUN npm ci || npm install
 
 # Копируем Prisma схему и конфиги
 COPY prisma ./prisma/
