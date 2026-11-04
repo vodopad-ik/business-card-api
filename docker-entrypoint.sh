@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-echo "🚀 Preparing database schema..."
+echo "Preparing database schema..."
 npx prisma db push --accept-data-loss
 
 echo "Running database seed..."

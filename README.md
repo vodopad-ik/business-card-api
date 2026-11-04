@@ -19,7 +19,18 @@ docker compose up --build
 ```
 
 После старта перейдите в интерактивный **Apollo Sandbox**:
-🔗 **[http://localhost:3000/graphql](http://localhost:3000/graphql)**
+🔗 **[http://localhost:3000/graphql](http://localhost:3000/graphql)** *(или просто [http://localhost:3000](http://localhost:3000) — настроен авторедирект)*.
+
+---
+
+## ☁️ Развертывание в облаке (Render / Railway)
+
+В репозитории уже настроен Blueprint [`render.yaml`](./render.yaml) для бесплатного 1-click развертывания PostgreSQL + Docker Web Service на **Render**:
+
+1. Зарегистрируйтесь на [render.com](https://render.com) (через GitHub).
+2. Перейдите в **Blueprints** → **New Blueprint Instance**.
+3. Выберите репозиторий `vodopad-ik/business-card-api`.
+4. Нажмите **Apply** — Render автоматически создаст PostgreSQL, соберет Docker-образ, накатит миграции и сид данных!
 
 ---
 

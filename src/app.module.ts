@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { AppController } from './app.controller.js';
 import { PrismaModule } from './prisma/prisma.module.js';
 import { ProfileModule } from './profile/profile.module.js';
 import { SkillModule } from './skill/skill.module.js';
@@ -28,5 +29,6 @@ import { join } from 'node:path';
     ExperienceModule,
     ProjectModule,
   ],
+  controllers: [AppController],
 })
 export class AppModule {}
