@@ -19,4 +19,3 @@ databases:
     plan: free
     region: frankfurt
     databaseName: business_card
-    user: postgres
