@@ -3,6 +3,8 @@
 > **GraphQL API цифровой визитки Fullstack/Backend инженера (Влад Бышкало / Uladzislau Byshkala)**  
 > Построено на **NestJS 12**, **Apollo Server 5**, **Prisma ORM 7**, **PostgreSQL 16** и **Docker Compose**.
 
+🌐 **Live Demo (Apollo Sandbox): [https://business-card-api-a6tb.onrender.com/graphql](https://business-card-api-a6tb.onrender.com/graphql)**
+
 ---
 
 ## ⚡ Быстрый старт (One-command Launch)
