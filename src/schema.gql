@@ -1,0 +1,90 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+"""Commercial work experience"""
+type ExperienceModel {
+  achievements: [String!]!
+  company: String!
+  createdAt: DateTime!
+  description: String
+  endDate: DateTime
+  id: ID!
+  position: String!
+  profileId: String!
+  startDate: DateTime!
+  updatedAt: DateTime!
+}
+
+"""Commercial work experience"""
+type ProfileModel {
+  avatarUrl: String
+  createdAt: DateTime!
+  description: String!
+  email: String!
+  experience: [ExperienceModel!]!
+  id: ID!
+  location: String!
+  name: String!
+  projects: [ProjectModel!]!
+  skills: [SkillModel!]!
+  socialLinks: [SocialLinkModel!]!
+  title: String!
+  updatedAt: DateTime!
+}
+
+"""Professional social link or profile"""
+type ProjectModel {
+  createdAt: DateTime!
+  description: String
+  id: ID!
+  name: String!
+  profileId: String!
+  repositoryUrl: String
+  updatedAt: DateTime!
+  url: String
+}
+
+type Query {
+  experience: [ExperienceModel!]!
+  profile: ProfileModel
+  projects: [ProjectModel!]!
+  skills(category: SkillCategory): [SkillModel!]!
+}
+
+"""Categories of professional skills"""
+enum SkillCategory {
+  CLOUD
+  DATABASE
+  DEVOPS
+  FRAMEWORK
+  LANGUAGE
+  MESSAGING
+  TESTING
+  TOOL
+}
+
+"""Technical skill"""
+type SkillModel {
+  category: SkillCategory!
+  createdAt: DateTime!
+  id: ID!
+  name: String!
+  profileId: String!
+  updatedAt: DateTime!
+}
+
+"""Professional social link or profile"""
+type SocialLinkModel {
+  createdAt: DateTime!
+  id: ID!
+  platform: String!
+  profileId: String!
+  updatedAt: DateTime!
+  url: String!
+}

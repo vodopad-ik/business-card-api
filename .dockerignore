@@ -1,0 +1,9 @@
+node_modules
+dist
+generated
+.git
+.agents
+.vscode
+*.log
+.env
+.env.*

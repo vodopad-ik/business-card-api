@@ -21,12 +21,15 @@ Every domain module (profile, skill, experience, project) follows this strict se
 
 ## Tech Stack & Versions
 
-- **Runtime**: Node.js 20 LTS
-- **Language**: TypeScript 5.x (strict mode)
-- **Framework**: NestJS 10.x
-- **ORM**: Prisma 5.x
-- **GraphQL**: @nestjs/graphql + @nestjs/apollo + apollo-server-express
+- **Runtime**: Node.js 24.x
+- **Language**: TypeScript 6.x (strict mode, ESM)
+- **Module System**: ESM (`"type": "module"` in package.json, `nodenext` in tsconfig)
+- **Framework**: NestJS 12.x
+- **ORM**: Prisma 7.x
+- **GraphQL**: @nestjs/graphql 14 + @nestjs/apollo 14 + @apollo/server 5
 - **Database**: PostgreSQL 16
+- **Testing**: Vitest 4.x (API-compatible with Jest)
+- **Linting**: oxlint + Prettier
 - **Containerization**: Docker + Docker Compose
 
 ## Code Conventions
@@ -61,8 +64,9 @@ Every domain module (profile, skill, experience, project) follows this strict se
 - `camelCase` for variables and methods
 
 ### Imports
+- ESM: all relative imports must include `.js` extension: `import { Foo } from './foo.service.js'`
 - Group imports: 1) Node built-ins, 2) External packages, 3) Internal modules
-- Use path aliases (`@/`) if configured, otherwise relative paths
+- Use relative paths for internal modules
 
 ## Docker
 - Multi-stage Dockerfile: build → production
@@ -71,7 +75,7 @@ Every domain module (profile, skill, experience, project) follows this strict se
 - Entrypoint: migrate → seed → start
 
 ## Testing (if added)
-- Jest for unit tests
+- Vitest for unit tests (Jest-compatible API)
 - Test files co-located: `*.spec.ts` next to source
 - Mock PrismaService in unit tests
 

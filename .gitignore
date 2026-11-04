@@ -4,6 +4,7 @@ package-lock.json
 
 # Build
 dist/
+*.tsbuildinfo
 
 # Environment
 .env
@@ -35,3 +36,13 @@ coverage/
 
 # Agents (local AI config)
 .agents/
+
+/generated/prisma
+
+# AI Assistant configs & caches
+.claude/
+.cursor/
+.devin/
+.windsurf/
+skills-lock.json
+generated/
