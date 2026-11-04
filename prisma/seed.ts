@@ -97,7 +97,7 @@ async function main(): Promise<void> {
           company: 'Innowise Group',
           position: 'Fullstack Engineer',
           description: 'B2B Commerce & Order Orchestration Platform',
-          startDate: new Date('2024-04-01'),
+          startDate: new Date('2025-06-01'),
           endDate: null,
           achievements: [
             'Architected NestJS checkout services isolating inventory reservations under peak concurrent traffic',
@@ -112,8 +112,8 @@ async function main(): Promise<void> {
           company: 'Innowise Group',
           position: 'Backend Engineer',
           description: 'Event-Driven Notification & Telemetry Microservices',
-          startDate: new Date('2023-09-01'),
-          endDate: new Date('2024-03-31'),
+          startDate: new Date('2024-08-01'),
+          endDate: new Date('2025-05-31'),
           achievements: [
             'Designed decoupled Kafka producers and consumer groups partitioned by tenant keys for reliable message delivery',
             'Created fault-tolerant task queues with BullMQ, featuring exponential backoff retries and Dead Letter Queues',
@@ -126,8 +126,8 @@ async function main(): Promise<void> {
           company: 'Innowise Group',
           position: 'Software Engineer',
           description: 'Workflow & Asset Management System API',
-          startDate: new Date('2021-03-01'),
-          endDate: new Date('2022-08-31'),
+          startDate: new Date('2023-11-01'),
+          endDate: new Date('2024-07-31'),
           achievements: [
             'Built RESTful backend for enterprise asset tracking, status transition workflows, and role governance',
             'Engineered modular REST APIs with Express.js supporting complex state machine transitions and audit logging',
